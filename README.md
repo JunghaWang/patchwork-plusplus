@@ -34,19 +34,33 @@
 - revised on 2025.03.12
 - code change in 'GroundSegmentationServer.cpp' & 'GroundSegmentationServer.hpp'
 - =====> 김경환 화이팅 <=====
-  
+
+
+
+#### 0. How to build
+
+    mkdir -p ~/ros2_ws/src
+    cd ~/ros2_ws/src
+    git clone https://github.com/JunghaWang/patchwork-plusplus_ros2-galactic.git
+    cd ~/ros2_ws
+    colcon build --packages-select patchworkpp
+    source ./install/setup.bash 
+
 #### 1. .mcap ROS2 bag 실행하기 위한 dependency 설치
 ```sh
 sudo apt install ros-galactic-rosbag2-storage-mcap
 ```
 
-#### 2. pathworkhpp 실행하기
-첫번째 터미널 띄우기 
+#### 2. patchworkhpp 실행하기
+
 ```sh
 ros2 launch patchworkpp patchworkpp.launch.py visualize:=true use_sim_time:=true cloud_topic:=/lexus3/os_center/points base_frame:=lexus3/os_center_a_laser_data_frame
 ```
+
 #### 3. .mcp ROS2 bag 실행하기
-두번째 터미널 띄우기
+> Download a sample dataset for ros2: [mcap file download [~540MB] ](https://laesze-my.sharepoint.com/:u:/g/personal/herno_o365_sze_hu/Eclwzn42FS9GunGay5LPq-EBA6U1dZseBFNDrr6P0MwB2w?download=1)
+> 
+
 ```sh
 ros2 bag play lexus3-2024-04-05-gyor.mcap -s mcap --loop
 ```
