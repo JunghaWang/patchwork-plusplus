@@ -38,14 +38,14 @@
 
 
 #### 0. How to build
-
-    mkdir -p ~/ros2_ws/src
-    cd ~/ros2_ws/src
-    git clone https://github.com/JunghaWang/patchwork-plusplus_ros2-galactic.git
-    cd ~/ros2_ws
-    colcon build --packages-select patchworkpp
-    source ./install/setup.bash 
-
+```commandline
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws/src
+git clone https://github.com/JunghaWang/patchwork-plusplus_ros2-galactic.git
+cd ~/ros2_ws
+colcon build --packages-select patchworkpp
+source ./install/setup.bash 
+```
 #### 1. .mcap ROS2 bag 실행하기 위한 dependency 설치
 ```sh
 sudo apt install ros-galactic-rosbag2-storage-mcap
