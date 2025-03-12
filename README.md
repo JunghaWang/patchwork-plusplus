@@ -23,6 +23,39 @@
   [Patchwork++][arXivlink], an extension of [Patchwork][patchworklink], is **a fast, robust, and self-adaptive ground segmentation algorithm** on 3D point cloud.
 </div>
 
+
+
+
+<br /><br />
+
+
+# Revised code for ROS2 Galactic ver. 
+- revised by Jungha Wang
+- revised on 2025.03.12
+- code change in 'GroundSegmentationServer.cpp' & 'GroundSegmentationServer.hpp'
+- =====> 김경환 화이팅 <=====
+  
+#### 1. .mcap ROS2 bag 실행하기 위한 dependency 설치
+```sh
+sudo apt install ros-galactic-rosbag2-storage-mcap
+```
+
+#### 2. pathworkhpp 실행하기
+첫번째 터미널 띄우기 
+```sh
+ros2 launch patchworkpp patchworkpp.launch.py visualize:=true use_sim_time:=true cloud_topic:=/lexus3/os_center/points base_frame:=lexus3/os_center_a_laser_data_frame
+```
+#### 3. .mcp ROS2 bag 실행하기
+두번째 터미널 띄우기
+```sh
+ros2 bag play lexus3-2024-04-05-gyor.mcap -s mcap --loop
+```
+
+  <br /><br /><br />
+
+
+
+
 [YouTubeLInk]: https://www.youtube.com/watch?v=fogCM159GRk
 [arXivlink]: https://arxiv.org/abs/2207.11919
 [patchworklink]: https://github.com/LimHyungTae/patchwork
