@@ -33,7 +33,6 @@
 - revised by Jungha Wang
 - revised on 2025.03.12
 - code change in 'GroundSegmentationServer.cpp' & 'GroundSegmentationServer.hpp'
-- =====> 김경환 화이팅 <=====
 
 
 
